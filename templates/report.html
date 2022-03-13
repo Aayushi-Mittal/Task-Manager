@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="flex flex-wrap flex-row justify-between items-center mb-8">
+	<div class="text-3xl font-bold">ToDo Manager - Reports</div>
+</div>
+
+<form action="" method="post">     
+    <div class="flex justify-center flex-col w-full text-base">
+                {{ form.non_field_errors }}
+                <div class="fieldWrapper">
+                    {{ form.time.errors }}
+                    <label for="{{ form.time.id_for_label }}">Time:</label><br/>
+                    {{ form.time }}
+                </div>
+                <div class="fieldWrapper">
+                    {{ form.is_diabled.errors }}
+                    <label for="{{ form.is_disabled.id_for_label }}">Disable Emails:</label><br/>
+                    {{ form.is_disabled }}
+                </div>
+                {% csrf_token %}
+                <a href="/all_tasks/">
+                    <button class="bg-red-500 hover:bg-red-700 text-white font-medium py-2 px-4 rounded-md font-base text-center mt-8 w-full">
+                        Update Report Settings
+                    </button>
+                </a>
+    </div>
+</form> 
+{% endblock content %}
