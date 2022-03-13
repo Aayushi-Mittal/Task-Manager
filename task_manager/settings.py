@@ -152,4 +152,4 @@ EMAIL_BACKEND = "django.core.mail.backend.console.EmailBackend"
 STATIC_URL = 'static/'
 STATIC_ROOT = BASE_DIR / "staticfiles/"
 
-# ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS = ["*"]
